@@ -90,7 +90,10 @@
             });
 
             socket.on('new message', function (data) {
-                $chat.append('<div class="well"><strong>' + data.user + ': </strong>' + data.msg + '</div>');
+                 var d = new Date().toLocaleTimeString();;
+                 console.log(d);
+                 
+                $chat.append('<div class="well"><h5><strong>' + data.user + ': </strong>' + data.msg +'</h5> <small>'+d+'</small></div>');
                 $chat.append('<br>');
             });
 
